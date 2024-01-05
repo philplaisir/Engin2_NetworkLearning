@@ -201,7 +201,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 6193644456894574910, guid: f960b391fc323f048b10865629ee6b60, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 8778105629424879799, guid: b359fc6848f866743afe781e5de4dd68, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32
@@ -1046,6 +1047,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 934253200240015886, guid: b359fc6848f866743afe781e5de4dd68, type: 3}
+      propertyPath: sync_isEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1222840059534223055, guid: b359fc6848f866743afe781e5de4dd68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

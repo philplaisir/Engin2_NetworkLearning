@@ -33,7 +33,8 @@ public class NetworkedCharacterController : NetworkBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            NetworkedWall._instance.gameObject.SetActive(!NetworkedWall._instance.gameObject.activeInHierarchy);
+            Debug.Log("GetKeyDown");
+            NetworkedWall._instance.SetActiveNetworked();
         }
 
     }
@@ -57,8 +58,7 @@ public class NetworkedCharacterController : NetworkBehaviour
     private void UpdateAnimator()
     {
         // Je pourrais faire un blend d'animation si mon personnage marche de coter et tout
-        bool isMoving = m_navMeshAgent.velocity.magnitude > MINIMUM_MOVEMENT_SPEED;
-        //bool isMoving = m_navMeshAgent.remainingDistance > m_navMeshAgent.stoppingDistance;
+        bool isMoving = m_navMeshAgent.velocity.magnitude > MINIMUM_MOVEMENT_SPEED;        
 
         m_animator.SetBool("Walking", isMoving);
     }
